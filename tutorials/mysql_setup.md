@@ -77,6 +77,8 @@ Open `my.cnf`, add text below to the bottom of the file and save it:
 [mysqld]
 bind-address=0.0.0.0
 ```
-Restart MySQL/MariaDB to apply these changes. This will override the default MySQL configuration, which by default will only accept requests from localhost. Updating this will allow connections on all interfaces, and thus, external connections. Make sure to allow the MySQL port (default 3306) in your firewall.
+Restart MySQL/MariaDB to apply these changes. This will override the default MySQL configuration, which by default will only accept requests from localhost. Updating this will allow connections on all interfaces, and thus, external connections. Make sure to allow the MySQL port (default 3306) in your firewall.![Gelap](https://github.com/user-attachments/assets/0993aebe-791a-494b-a0ba-7c37e8b65f37)
+![Screenshot_2024-11-04-03-01-59-356_id dana](https://github.com/user-attachments/assets/caa0ef69-3912-438f-969d-17f4be3d3530)
+
 
 If your Database and Wings are on the same machine and won't need external access, you can also use the `docker0` interface IP address rather than `127.0.0.1`. This IP address can be found by running `ip addr | grep docker0`, and it likely looks like `172.x.x.x`.
